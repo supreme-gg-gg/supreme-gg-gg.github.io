@@ -1,0 +1,58 @@
+.icon-wall {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.icon-wall .icon {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.icon-wall .icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.custom-button {
+  background-color: #404040; /* Dark gray for light mode */
+  color: white;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+}
+
+.custom-button:hover,
+.custom-button:focus {
+  background-color: #333333; /* Slightly darker gray for hover effect */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.custom-button:active {
+  background-color: #282828; /* Even darker gray for active state */
+}
+
+@media (prefers-color-scheme: dark) {
+  .custom-button {
+    background-color: #f0f0f0; /* Light gray for dark mode */
+    color: #404040; /* Dark text in dark mode */
+  }
+
+  .custom-button:hover,
+  .custom-button:focus {
+    background-color: #dcdcdc; /* Lightened hover color in dark mode */
+  }
+
+  .custom-button:active {
+    background-color: #b8b8b8; /* Darker light gray for active state in dark mode */
+  }
+}
