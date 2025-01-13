@@ -1,0 +1,54 @@
+<div id="typewriter-container">
+  <h2 id="typewriter-text"></h2>
+</div>
+
+<script>
+  const languages = [
+    { name: "Python", code: 'print("Hello, World!")' },
+    { name: "C++", code: 'std::cout << "Hello, World!" << std::endl;' },
+    { name: "JavaScript", code: 'console.log("Hello, World!")' },
+  ];
+
+  const textElement = document.getElementById('typewriter-text');
+  let langIndex = 0;
+  let charIndex = 0;
+  let typingInterval;
+
+  function typeCode() {
+    if (charIndex < languages[langIndex].code.length) {
+      textElement.textContent += languages[langIndex].code.charAt(charIndex);
+      charIndex++;
+    } else {
+      clearInterval(typingInterval);
+      setTimeout(() => {
+        textElement.textContent = ''; // Clear the line but keep container height consistent
+        charIndex = 0;
+        langIndex = (langIndex + 1) % languages.length; // Cycle to next language
+        startTyping();
+      }, 1500); // Pause before switching languages
+    }
+  }
+
+  function startTyping() {
+    textElement.textContent = ''; // Reset the text
+    typingInterval = setInterval(typeCode, 100); // Typing speed
+  }
+
+  startTyping();
+</script>
+
+<style>
+#typewriter-container {
+    display: block;
+    height: 3.5em; /* Ensures the height remains consistent for one line */
+    font-family: monospace;
+    white-space: nowrap; /* Prevents line wrapping */
+    overflow: hidden;
+    text-align: left; /* Aligns text to the left */
+}
+
+  #typewriter-text {
+    font-size: 1.5em;
+    line-height: 1.2; /* Adjust line height if needed */
+  }
+</style>
