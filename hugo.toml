@@ -20,7 +20,7 @@ pygmentsCodefencesGuessSyntax = true
 
 [Params] 
 #  homeTitle = "Jet Chiang's Portfolio" # Set a different text for the header on the home page
-  subtitle = "Machine Learning Student"
+  subtitle = "Engineering Science, University of Toronto"
   mainSections = ["post","posts"]
   logo = "img/pfp.jpg" # Expecting square dimensions
   favicon = "img/favicon.ico"
@@ -89,7 +89,12 @@ pygmentsCodefencesGuessSyntax = true
   
 [[menu.main]]
     name = "Projects"
-    url = "page/projects"
+    url = ""
+    weight = 2
+
+[[menu.main]]
+    name = "Research"
+    url = "page/research"
     weight = 2
   
 [[menu.main]]
