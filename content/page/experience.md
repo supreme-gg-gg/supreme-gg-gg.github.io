@@ -8,6 +8,14 @@ comments: false
 
 {{< timeline >}}
 
+## 🎓 Courses
+
+| Name | Description | Attendance |
+|------|-------------|------------|
+| **ESC190 (DSA in C)** | Data Structure and Algorithm taught in C | Winter 2025 |
+| **ECE1508 (Applied Deep Learning)** | Comprehensive study of DL from MLP to variational autoencoders | Fall 2024, Audited |
+| **CS229 (Machine Learning)** | Intro to ML and statistical pattern recognition (Stanford online) | Self-studied Summer 2024 |
+
 ## 🏅 Awards
 
 I enjoy participating in academic contests because they challenge me to think critically and creatively. Furthermore, I find it very exciting to learn about new things in different fields of study and solve problems that I have never encountered before. Here are some of the awards I have won:
@@ -42,4 +50,10 @@ Learning about business and entrepreneurship is one of my passions. They provide
 
 ## 🤝 Volunteering
 
-- **Sessional Volunteer**: Engineering Science Education Conference, presented an introduction and moderated Q&A for guest speakers
+* **Sessional Volunteer**:
+    * Engineering Science Education Conference 2025
+    * Presented introduction and moderated Q&A for guest speakers
+
+- **Mentor and Chapter Lead**:
+    * Auxilium Mentorship, helping high school students with STEM subjects
+    * Coordinated mentor matching using automation by Google AppScript
