@@ -1,15 +1,13 @@
-## Hello, World
+## std::cout << "Hello, World!";
 
-Welcome to my website!
+I am a first year undergraduate student studying Engineering Science at the University of Toronto. I am passionate about machine learning and its application in interdisciplinary fields such as fintech and biomedical engineering. 
 
-- First Year Engineering Science @ University of Toronto (GPA: 3.95/4.0)
+Outside of hackathons, design teams, and personal projects, I enjoy reading classic literature and philosophy.
 
-- MLE @ St George Capital, NeuroTech (Student Design Teams)
+{{< button url="https://drive.google.com/file/d/1Akw4PJuJ-ddLfbTpmsy4w4PJGI237pCe/view?usp=sharing" >}}Resume Download{{< /button >}}
 
-- Prev SWE Intern @ Ericsson (Radio Dot System)
+---
 
-- Looking for Summer 2025 Internship/Research Opportunities
-
-Learn more about me [at this page](/page/about). Excited to connect with you on [LinkedIn](https://www.linkedin.com/in/jet-chiang/). Happy to collaborate with anyone on future projects, ideas, or hackathons!
+_Have a project idea in mind?_ Connect with my socials and I'm always open to new opportunities and collaborations.
 
 > NOTE: This website is still under construction. Not all pages are finalised.

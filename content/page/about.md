@@ -4,7 +4,7 @@ subtitle: Learn more about me
 comments: false
 ---
 
-My name is Jet Chiang. I am a first year undergraduate student studying Engineering Science at the University of Toronto in Canada. I am motivated to seek constant self improvement and personal growth through actively taking on different challenges in engineering, leadership, and innovation. I am passionate about machine learning and its application in interdisciplinary fields such as fintech and biomedical engineering.
+My name is Jet Chiang. I grew up in Hong Knog and I am now studying at the University of Toronto. I am motivated to seek constant self improvement and personal growth through actively taking on different challenges in engineering, leadership, and innovation. Toronto is one of the birthplaces of artificial intelligence, and I am excited to be part of the impactful research and transformative innovation happening here.
 
 > "Devote the rest of your life to making progress." -- Epictetus
 
@@ -14,7 +14,7 @@ My name is Jet Chiang. I am a first year undergraduate student studying Engineer
 
 I am passionate about machine learning and its applications in biomedical engineering, particularly in cognitive science and neurotechnology, drawing inspiration from the human brain to create intelligent machines.
 
-Currently, I work as a Machine Learning Engineer at St. George Capital and NeuroTech, and contribute to two student design teams at UofT focused on quantitative finance and neurotechnology. I have also interned as a Software Engineer at Ericsson. Driven by a passion for machine learning, software engineering, and entrepreneurship, I seek continuous growth through side projects, hackathons, and collaborative problem-solving.
+Currently, I work as a Machine Learning Engineer at St. George Capital and NeuroTech, contributing to two student design teams at UofT focused on quantitative finance and neurotechnology. Last summer, I interned as a Software Developer at Ericsson's indoor radio team, where I greatly expanded by knoweldge about telecommunication and software engineering practices. Driven by a passion for machine learning, software engineering, and entrepreneurship, I seek continuous growth through side projects, hackathons, and collaborative problem-solving.
 
 Outside of academics and work, I enjoy reading great works of classic literature and philosophy.
 

@@ -5,11 +5,15 @@ date: 2024-12-31
 tags: ["python", "machine-learning", "aws", "hackathon"]
 ---
 
-Cosine similarity is a simple way to measure how similar two vectors are, yet it inspired us to solve a complex roomate matching problem at AWS Hackathon hosted by IEEE UofT. Starting from semantic similarity, Pual, Eric, Hayson, and I (EngSci 2T8) built a recommendation system inspired by retrieval augmented generation (RAG) and graph theory to match roomates based on their preferences and personalities that won the hackathon.
+Cosine similarity is a simple way to measure how similar two vectors are, yet it inspired my team to come up with an unique solution to the complex roomate matching problem at AWS Hackathon hosted by IEEE UofT.
 
 $$
-\text{similarity} = \cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|}
+\cos(\mathbf{x}_q, \mathbf{x}_i) = \frac{\mathbf{x}_q \cdot \mathbf{x}_i}{\|\mathbf{x}_q\| \|\mathbf{x}_i\|}
 $$
+
+Pual, Eric, Hayson, and I eventually won the hackathon by building a recommendation system inspired by retrieval augmented generation (RAG) and graph theory to match roomates based on their preferences and personalities.
+
+<!--more-->
 
 ## The Problem
 
