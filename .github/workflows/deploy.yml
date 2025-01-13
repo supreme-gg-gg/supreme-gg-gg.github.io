@@ -1,33 +1,33 @@
-# .github/workflows/deploy.yml
-name: Deploy Hugo site
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main # Or your default branch
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repo
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive  # This ensures submodules are also cloned
 
-      # Setup Hugo
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "latest"
+    - name: Set up Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.140.2'  # Change this to the Hugo version you're using
 
-      # Build the site
-      - name: Build Hugo site
-        run: hugo
+    - name: Build the site
+      run: hugo
 
-      # Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
