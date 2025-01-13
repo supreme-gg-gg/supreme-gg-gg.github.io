@@ -92,27 +92,15 @@ pygmentsCodefencesGuessSyntax = true
     url = ""
     weight = 2
 
+# [[menu.main]]
+#    name = "Research"
+#    url = "page/research"
+#    weight = 2
+
 [[menu.main]]
-    name = "Research"
-    url = "page/research"
-    weight = 2
-  
-[[menu.main]]
-    identifier = "experience"
     name = "Experience"
+    url = "page/experience"
     weight = 3
-
-[[menu.main]]
-    parent = "experience"
-    name = "Volunteering"
-    url = "post/2017-03-05-math-sample"
-    weight = 1
-
-[[menu.main]]
-    parent = "experience"
-    name = "Awards"
-    url = "post/2016-03-08-code-sample"
-    weight = 2
 
 [[menu.main]]
     name = "Tags"

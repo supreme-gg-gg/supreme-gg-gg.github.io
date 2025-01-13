@@ -56,3 +56,82 @@
     background-color: #b8b8b8; /* Darker light gray for active state in dark mode */
   }
 }
+
+/* General Timeline Styles */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ddd;  /* Subtle vertical line color */
+  transform: translateX(-50%);
+}
+
+/* Each Timeline Event */
+.timeline-event {
+  position: relative;
+  width: 80%;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fff; /* White background for the card */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for the card effect */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timeline-event:nth-child(even) {
+  align-self: flex-end; /* Even events will align to the right */
+}
+
+.timeline-event:nth-child(odd) {
+  align-self: flex-start; /* Odd events will align to the left */
+}
+
+/* Timeline Event Title */
+.timeline-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333; /* Dark color for title */
+  margin-bottom: 10px;
+}
+
+/* Timeline Event Date */
+.timeline-date {
+  font-size: 0.9em;
+  color: #888; /* Lighter color for the date */
+  margin-bottom: 15px;
+}
+
+/* Timeline Event Description */
+.timeline-description {
+  font-size: 1em;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Adding Responsiveness */
+@media (max-width: 768px) {
+  .timeline-event {
+    width: 90%; /* More space on small screens */
+  }
+
+  .timeline-event:nth-child(even),
+  .timeline-event:nth-child(odd) {
+    align-self: center; /* Stack events in the center on small screens */
+  }
+}

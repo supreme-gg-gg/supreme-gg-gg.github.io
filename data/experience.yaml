@@ -1,0 +1,24 @@
+- title: "MLE, NeuroTech UofT"
+  start: "2024-10-01"
+  end: "Present"
+  description: "EEG signal preprocessing and feature extraction and prediction of Parkinsons tremor offset using supervised learning."
+
+- title: "MLE, St George Capital"
+  start: "2024-09-15"
+  end: "Present"
+  description: "Research model-free deep reinfrocement learning in portfolio optimization and integrating financial optimization algorithms."
+
+- title: "SWE Intern, Ericsson"
+  start: "2024-07-01"
+  end: "2024-08-31"
+  description: "Implement and debug unit tests and component integration tests for embedded software and troubleshoot Jenkins CI/CD pipelines."
+
+- title: "Team 7476 Member, FRC Robotics"
+  start: "2024-10-01"
+  end: "2024-05-01"
+  description: "Hosting a science and tech summit for high school students with 10+ professionals from Canada's largest tech park in Kanata North"
+
+- title: "Co-president, Math Club & Science Club"
+  start: "2024-09-01"
+  end: "2024-06-01"
+  description: "Euclid, AMIE, CSMC contest workshops; taught AP Calc AB/BC unofficial courses; invited professors and researchers to give talks"
