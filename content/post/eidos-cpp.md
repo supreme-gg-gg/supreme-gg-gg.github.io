@@ -37,7 +37,6 @@ model.Add(new DenseLayer(128, 10));
 
 We have also implemented other layers and activations like `Conv2D`, `MaxPool2D`, `GRU`, `BatchNorm`, etc. The model can be trained and tested using the following code:
 
-
 {{< highlight cpp "linenos=inline">}}
     // Create optimizer and loss function
     Adam optimizer(0.001);
