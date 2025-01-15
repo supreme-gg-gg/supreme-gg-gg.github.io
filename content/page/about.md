@@ -14,9 +14,9 @@ My name is Jet Chiang. I grew up in Hong Knog and I am now studying at the Unive
 
 I am passionate about machine learning and its applications in biomedical engineering. In particular, cognitive science and neuroscience fascinates me because I am eager to understand how to integrate machine learning with the biological intelligence.
 
-Currently, I work as a Machine Learning Engineer at St. George Capital and NeuroTech, contributing to two student design teams at UofT focused on quantitative finance and neurotechnology. Last summer, I interned as a Software Developer at Ericsson's indoor radio team, where I greatly expanded by knoweldge about telecommunication and software engineering practices. Driven by a passion for machine learning, software engineering, and entrepreneurship, I seek continuous growth through side projects, hackathons, and collaborative problem-solving.
+Currently, I work as a Machine Learning Engineer at St. George Capital and NeuroTech, contributing to two student design teams at UofT focused on **quantitative finance** and **neurotechnology**. Last summer, I interned as a Software Developer at Ericsson's indoor radio team, where I greatly expanded by knoweldge about telecommunication and software engineering practices. Driven by a passion for machine learning, software engineering, and entrepreneurship, I seek continuous growth through side projects, hackathons, and collaborative problem-solving.
 
-Outside of academics and work, I enjoy reading great works of classic literature and philosophy.
+Outside of academics and work, I enjoy reading great works of classic literature and philosophy. Check out my [Goodreads](https://www.goodreads.com/user/show/166962144-jet-chiang) for my bookshelf. _This is not up to date becasue I use my own Notion database, which unfortunately is not public._
 
 ## Skills
 
