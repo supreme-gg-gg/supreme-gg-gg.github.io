@@ -27,7 +27,7 @@ pygmentsCodefencesGuessSyntax = true
   dateFormat = "January 2, 2006"
   enableGitInfo = true
   commit = "https://github.com/supreme-gg-gg/my-portfolio/tree/"
-  rss = true
+#  rss = true
   comments = true
   readingTime = true
   wordCount = true
@@ -60,10 +60,10 @@ pygmentsCodefencesGuessSyntax = true
   github = "supreme-gg-gg"
   gitlab = "supreme-gg-gg"
   linkedin = "jet-chiang"
-  kaggle = "username"
-  slack = "username"
-  medium = "username"
-  discord = "invite code (https://discord.gg/XXXXXXX)"
+  kaggle = "jetchiang"
+#  slack = "username"
+#  medium = "username"
+  discord = "invite code (https://discord.gg/905404381762052137)"
 
 [[menu.main]]
     name = "About"
