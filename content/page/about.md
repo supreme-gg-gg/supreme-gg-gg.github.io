@@ -1,6 +1,6 @@
 ---
 title: About me
-subtitle: Learn more about me
+subtitle: Interests and Skills
 comments: false
 ---
 

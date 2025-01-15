@@ -2,7 +2,7 @@
 title: WeDream
 subtitle: Duolingo for Sleep
 date: 2024-06-01
-tags: ["swift", "personal project", "ios"]
+tags: ["swift", "personal-projects", "ios"]
 disable_header: false
 ---
 

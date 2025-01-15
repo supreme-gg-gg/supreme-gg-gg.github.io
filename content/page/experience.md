@@ -12,7 +12,8 @@ comments: false
 
 | Name | Description | Attendance |
 |------|-------------|------------|
-| **ESC190 (DSA in C)** | Data Structure and Algorithm taught in C | Winter 2025 |
+| **ESC180 (Programming in Python)** | Introductory Python course | Fall 2024, A+ |
+| **ESC190 (DSA in C)** | Data Structure and Algorithm in C | Winter 2025, In Progress |
 | **ECE1508 (Applied Deep Learning)** | Comprehensive study of DL from MLP to variational autoencoders | Fall 2024, Audited |
 | **CS229 (Machine Learning)** | Intro to ML and statistical pattern recognition (Stanford online) | Self-studied Summer 2024 |
 
@@ -38,6 +39,9 @@ I enjoy participating in academic contests because they challenge me to think cr
 > **Sir Isaac Newton Physics Exam** (May 2024)  
 > Global Top 15%
 
+> **Ottawa Brain Bee (Neuroscience)** (May 2023)
+> Third Place Overall
+
 ---
 
 Learning about business and entrepreneurship is one of my passions. They provide essential skills that are useful in my current engineering education as well as in times like hackathons.
@@ -54,6 +58,6 @@ Learning about business and entrepreneurship is one of my passions. They provide
     * Engineering Science Education Conference 2025
     * Presented introduction and moderated Q&A for guest speakers
 
-- **Mentor and Chapter Lead**:
+* **Mentor and Chapter Lead**:
     * Auxilium Mentorship, helping high school students with STEM subjects
     * Coordinated mentor matching using automation by Google AppScript

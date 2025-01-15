@@ -1,11 +1,11 @@
 ---
-title: RL Collection
-subtitle: Assorted Projects on Reinforcement Learning
-date: 2024-10-01
-tags: ["python", "machine-learning", "personal project"]
+title: Introductory RL
+subtitle: Assorted Collection on Deep Reinforcement Learning
+date: 2024-11-05
+tags: ["python", "machine-learning", "personal-projects", "rl"]
 ---
 
-Reinforcement learning is a way of training an agent to make sequences of decisions in an environment. It is a powerful tool for solving complex problems in robotics, finance, and gaming. To broaden my knowledge in ML, I worked on a few small projects to learn fundamental deep RL algorithms such as DQN, REINFORCE, DDPG, and PPO. Please see [this project](pong.md) if you are interested in NEAT and Pong.
+Reinforcement learning (RL) is a way of training an agent to make sequences of decisions by finding the optimal action-taking policy through trial and error interactions with the environment. It is a powerful tool for solving complex problems in robotics, finance, and gaming. To broaden my knowledge in ML, I worked on a few small projects to learn fundamental deep RL algorithms such as **(Double) DQN, REINFORCE, DDPG, and PPO**. Please see [this project](pong.md) if you are interested in NEAT and Pong instead.
 
 {{< gallery caption-effect="fade" >}}
 {{< figure link="/img/rl/breakout.png">}}
@@ -15,16 +15,32 @@ Reinforcement learning is a way of training an agent to make sequences of decisi
 
 <!--more-->
 
-> I won't be including the math here but it is essential to learn the whole theory behind RL before diving into implementation. I will link sources for those interested. The post will be quite long so please navigate using the following table of contents:
-
-- [Deep Q Learning (DQN)](#deep-q-learning-dqn)
-- [PPO and DDPG](#ppo-and-ddpg)
+> I won't be including the math here but it is essential to learn the whole theory behind RL before diving into implementation. I will link sources for those interested.
 
 {{< button url="https://github.com/supreme-gg-gg/rl-lab" >}}My Source Code{{< /button >}}
+
+## What is RL?
+
+The agent learns to maximize the total reward by learning a __policy__ that maps states to actions. The agent interacts with the environment by observing the state, taking an action, and receiving a reward. The agent then updates its policy based on the reward it receives.
+
+{{< figure src="/img/rl/rl.png" caption="The Reinforcement Learning Paradigm">}}
+
+The agent learns a deterministic (e.g. DDPG) or stochastic (e.g. REINFORCE, PPO) policy:
+$$
+\pi(s) = a \text{ or } \pi(a|s) = P(a|s)
+$$
+
+A mathematical framework for RL is the __Markov Decision Process (MDP)__, which consists of state space, action space, transition probabilities, reward function, and discount factor.
+
+$$
+< S, A, P, R, \gamma >
+$$
 
 ## Deep Q Learning (DQN)
 
 I coded a DQN agent that learns to trade stocks in my own custom environment built with OpenAI Gym API. The agent trains on historical data (`yfinance` API) and learns to maximize portfolio return by buying and selling stocks. We used a simple Sortino ratio as the reward function to penalize downside risk.
+
+> RL is especially suitable for time series data due to its sequential nature.
 
 $$
 \text{Sortino Ratio} = \frac{R_p - R_f}{\sigma_d}
@@ -50,16 +66,21 @@ def __init__(self, input_size, output_size):
 
 To train the agent, for each episode we let the agent interact with the environment for a fixed number of steps. The agent observes the state, takes an action, and receives a reward. We store the experience in a replay buffer and sample a batch to train the network.
 
-Essentially, the agent is trying to minimize this loss function (Bellman equation):
+Essentially, the agent is trying to minimize this loss function (Bellman equation) in order to learn a function that predicts the Q-value of each action given a state:
 
 $$
 \text{Loss} = \mathbb{E}[(Q(s, a) - (r + \gamma \max_{a'} Q(s', a'))^2]
 $$
 
+Subsequently the agent can choose the best action using the trained policy network:
+
+$$
+\pi(s) = \arg\max_a Q(s, a; \theta)
+$$
+
 Here is how you can train the agent, **for each episode**:
 
 {{< highlight python "linenos=inline">}}
-
 # Initialize the environment and state
 state = self.env.reset()[0]
 state = torch.tensor(state, dtype=torch.float32, device=self.device).unsqueeze(0)
@@ -74,6 +95,7 @@ for t in count():
     else:
         next_state = torch.tensor(observation, dtype=torch.float32, device=self.device).unsqueeze(0)
 
+    # Store the transition in memory
     self.memory.push(state, action, next_state, reward)
     state = next_state
     self.optimize_model() # on the policy network
@@ -104,7 +126,19 @@ As part of my design team work, I continued my RL journey by implementing Proxim
 - `LunarLander-v2`
 - `BipedalWalker-v3`
 
-Compared to DQN, PG methods are more stable and efficient for continuous action spaces. However, they are more complicated and will take longer to learn. For example, the PPO agent uses a "clipped surrogate objective" to prevent the agent from updating too much in one direction (which looks really scary at first):
+Compared to DQN, PG methods are more stable and efficient for continuous action spaces. However, they are more complicated and will take longer to learn. Policy gradient algorithms update the policy network in the direction that increases the probability of good actions and decreases the probability of bad actions, using the gradient of the expected return with respect to the policy parameters.
+
+$$
+\nabla_\theta J(\pi_\theta) = \mathbb{E} \left[ \sum_{t=0}^T \nabla_\theta \log \pi_\theta(a_t \mid s_t) \cdot R_t \right]
+$$
+
+This can then be used to update the policy network using gradient ascent:
+
+$$
+\theta \leftarrow \theta + \alpha \nabla_{\theta} J(\theta)
+$$
+
+The PPO agent in my implementation (based on OpenAI's research paper) uses a "clipped surrogate objective" to prevent the agent from updating too much in one direction (which looks really scary at first):
 
 $$
 L^{\text{CLIP}}(\theta) = \mathbb{E}_t \left[ \min \left( r_t(\theta) A_t, \text{clip}(r_t(\theta), 1 - \epsilon, 1 + \epsilon) A_t \right) \right]
@@ -113,6 +147,20 @@ $$
 $$
 \text{where } r_t(\theta) = \frac{\pi_\theta(a_t | s_t)}{\pi_{\theta_{\text{old}}}(a_t | s_t)}
 $$
+
+Essentially, the agent is trying to maximize the expected return by updating the policy network in the direction that increases the probability of good actions and decreases the probability of bad actions. However, the __clipping__ prevents the policy from making overly large updates, which could destabilize training or cause the agent to forget previously learned behaviors. This ensures more stable and reliable learning by constraining the change in the policy’s probability ratio within a safe range, $$[1 - \epsilon, 1 + \epsilon]$$.
+
+I included the two analytic plots (tracked using `wandb`) from training PPO on [Cartpole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/), one of the simplest classic control games (balancing a pole on a cart):
+
+{{< columns >}}
+{{< figure link="/img/rl/ppo_reward.png" caption="PPO Reward in one environment">}}
+{{< column >}}
+{{< figure link="/img/rl/ppo_kl.png" caption="PPO KL Divergence">}}
+{{< endcolumns >}}
+
+An increasing reward and decreasing KL divergence indicate that the agent is learning to balance the pole effectively. To be particular, the **KL divergence** measures the difference between the old and new policy, and a small value indicates that the policy is not changing too much, which is the advantage of PPO.
+
+## A note on Atari preprocessing
 
 I find it helpful to note that these preprocessing techniques are useful when adapting RL algorithms to Atari games such as `BreakoutNoFrameskip-v4`:
 
@@ -140,3 +188,25 @@ def make_env(gym_id, seed, idx, capture_video, run_name):
         return env
 return thunk
 {{</ highlight >}}
+
+## Resources
+
+- [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/RLbook2018.pdf) by Richard S. Sutton and Andrew G. Barto (Textbook)
+
+- [OpenAI Spinning Up](https://spinningup.openai.com/en/latest/) (Tutorials with code)
+
+- [DeepMind X UCL](https://www.youtube.com/playlist?list=PLqYmG7hTraZDVH599EItlEWsUOsJbAodm) (Lectures)
+
+- [RL notes](https://gibberblot.github.io/rl-notes/intro/intro.html) (Notes)
+
+- The following research papers to understand popular RL algorithms:
+
+    - [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
+
+    - [Human-level control through deep reinforcement learning](https://www.nature.com/articles/nature14236)
+
+    - [Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971)
+
+    - [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
+
+    - [High-Dimensional Continuous Control Using Generalized Advantage Estimation](https://arxiv.org/abs/1506.02438)

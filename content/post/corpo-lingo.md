@@ -2,7 +2,7 @@
 title: Corpo Lingo
 subtitle: Get ready to buzzword your way to the top!
 date: 2024-10-28
-tags: ["javascript", "full-stack", "personal-projects"]
+tags: ["javascript", "full-stack", "personal-projects", "genAI"]
 ---
 
 Ever felt lost in a sea of corporate jargon? Fear not! This project will turn you into a corporate lingo master, ready to impress in any boardroom.

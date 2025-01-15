@@ -2,7 +2,7 @@
 title: Pong and NEAT
 subtitle: Neuroevolution beats human players
 date: 2024-11-01
-tags: ["python", "machine-learning", "personal-project"]
+tags: ["python", "machine-learning", "personal-projects", "rl"]
 ---
 
 NEAT, or NeuroEvolution of Augmenting Topologies, is a genetic algorithm for evolving neural networks. Hayson and I used the `neat-python` library to train a neural network to play Pong as an optional course project to develop an AI that compete in Pong tournament. The agent maximizes the reward by learning to hit the ball back to the opponent.
