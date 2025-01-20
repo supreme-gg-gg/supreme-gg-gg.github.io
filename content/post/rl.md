@@ -5,7 +5,7 @@ date: 2024-11-05
 tags: ["python", "machine-learning", "personal-projects", "rl"]
 ---
 
-Reinforcement learning (RL) is a way of training an agent to make sequences of decisions by finding the optimal action-taking policy through trial and error interactions with the environment. It is a powerful tool for solving complex problems in robotics, finance, and gaming. To broaden my knowledge in ML, I worked on a few small projects to learn fundamental deep RL algorithms such as **(Double) DQN, REINFORCE, DDPG, and PPO**. Please see [this project](pong.md) if you are interested in NEAT and Pong instead.
+Reinforcement learning (RL) is a way of training an agent to make sequences of decisions by finding the optimal action-taking policy through trial and error interactions with the environment. It is a powerful tool for solving complex problems in robotics, finance, and gaming. To broaden my knowledge in ML, I worked on a few small projects to learn fundamental deep RL algorithms such as **(Double) DQN, REINFORCE, DDPG, and PPO**. Please see [this project](./pong.md) if you are interested in NEAT and Pong instead.
 
 {{< gallery caption-effect="fade" >}}
 {{< figure link="/img/rl/breakout.png">}}

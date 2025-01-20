@@ -4,7 +4,7 @@ subtitle: Interests and Skills
 comments: false
 ---
 
-My name is Jet Chiang. I grew up in Hong Knog and I am now studying at the University of Toronto. I am motivated to seek constant self improvement and personal growth through actively taking on different challenges in engineering, leadership, and innovation. Toronto is one of the birthplaces of artificial intelligence, and I am excited to be part of the impactful research and transformative innovation happening here.
+My name is Jet Chiang. I grew up in Hong Kong and I am now studying at the University of Toronto. I am motivated to seek constant self improvement and personal growth through actively taking on different challenges in engineering, leadership, and innovation. Toronto is one of the birthplaces of artificial intelligence, and I am excited to be part of the impactful research and transformative innovation happening here.
 
 > "Devote the rest of your life to making progress." -- Epictetus
 
