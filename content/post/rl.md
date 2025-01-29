@@ -21,16 +21,17 @@ Reinforcement learning (RL) is a way of training an agent to make sequences of d
 
 ## What is RL?
 
-The agent learns to maximize the total reward by learning a __policy__ that maps states to actions. The agent interacts with the environment by observing the state, taking an action, and receiving a reward. The agent then updates its policy based on the reward it receives.
+The agent learns to maximize the total reward by learning a **policy** that maps states to actions. The agent interacts with the environment by observing the state, taking an action, and receiving a reward. The agent then updates its policy based on the reward it receives.
 
 {{< figure src="/img/rl/rl.png" caption="The Reinforcement Learning Paradigm">}}
 
 The agent learns a deterministic (e.g. DDPG) or stochastic (e.g. REINFORCE, PPO) policy:
+
 $$
 \pi(s) = a \text{ or } \pi(a|s) = P(a|s)
 $$
 
-A mathematical framework for RL is the __Markov Decision Process (MDP)__, which consists of state space, action space, transition probabilities, reward function, and discount factor.
+A mathematical framework for RL is the **Markov Decision Process (MDP)**, which consists of state space, action space, transition probabilities, reward function, and discount factor.
 
 $$
 < S, A, P, R, \gamma >
@@ -55,13 +56,13 @@ The agent includes the following components:
 For the network, we chose a customized GRU network as follows (assuming you are familiar with PyTorch):
 
 {{< highlight python "linenos=inline">}}
-def __init__(self, input_size, output_size):
-    super(GDQN, self).__init__()
-    self.gru1 = nn.GRU(input_size=input_size, hidden_size=HIDDEN_SIZE_GRU, num_layers=NUM_LAYERS_GRU, batch_first=True)
-    self.dropout1 = nn.Dropout(p=DROPOUT)
-    self.gru2 = nn.GRU(input_size=HIDDEN_SIZE_GRU, hidden_size=HIDDEN_SIZE_GRU, num_layers=1, batch_first=True)
-    self.dropout2 = nn.Dropout(p=DROPOUT)
-    self.fc = nn.Linear(HIDDEN_SIZE_GRU, output_size)
+def **init**(self, input_size, output_size):
+super(GDQN, self).**init**()
+self.gru1 = nn.GRU(input_size=input_size, hidden_size=HIDDEN_SIZE_GRU, num_layers=NUM_LAYERS_GRU, batch_first=True)
+self.dropout1 = nn.Dropout(p=DROPOUT)
+self.gru2 = nn.GRU(input_size=HIDDEN_SIZE_GRU, hidden_size=HIDDEN_SIZE_GRU, num_layers=1, batch_first=True)
+self.dropout2 = nn.Dropout(p=DROPOUT)
+self.fc = nn.Linear(HIDDEN_SIZE_GRU, output_size)
 {{</ highlight >}}
 
 To train the agent, for each episode we let the agent interact with the environment for a fixed number of steps. The agent observes the state, takes an action, and receives a reward. We store the experience in a replay buffer and sample a batch to train the network.
@@ -81,14 +82,16 @@ $$
 Here is how you can train the agent, **for each episode**:
 
 {{< highlight python "linenos=inline">}}
+
 # Initialize the environment and state
+
 state = self.env.reset()[0]
 state = torch.tensor(state, dtype=torch.float32, device=self.device).unsqueeze(0)
 for t in count():
-    action = self.select_action(state)
-    observation, reward, terminated, truncated, _ = self.env.step(action.item())
-    reward = torch.tensor([reward], device=self.device, dtype=torch.float32)
-    done = terminated or truncated
+action = self.select*action(state)
+observation, reward, terminated, truncated, * = self.env.step(action.item())
+reward = torch.tensor([reward], device=self.device, dtype=torch.float32)
+done = terminated or truncated
 
     if terminated:
         next_state = None
@@ -112,6 +115,7 @@ for t in count():
         episode_durations.append(t + 1)
         plot_durations(episode_durations)
         break
+
 {{</ highlight >}}
 
 This project is based on this [research paper](https://www.sciencedirect.com/science/article/abs/pii/S0020025520304692)
@@ -148,7 +152,9 @@ $$
 \text{where } r_t(\theta) = \frac{\pi_\theta(a_t | s_t)}{\pi_{\theta_{\text{old}}}(a_t | s_t)}
 $$
 
-Essentially, the agent is trying to maximize the expected return by updating the policy network in the direction that increases the probability of good actions and decreases the probability of bad actions. However, the __clipping__ prevents the policy from making overly large updates, which could destabilize training or cause the agent to forget previously learned behaviors. This ensures more stable and reliable learning by constraining the change in the policy’s probability ratio within a safe range, $$[1 - \epsilon, 1 + \epsilon]$$.
+Essentially, the agent is trying to maximize the expected return by updating the policy network in the direction that increases the probability of good actions and decreases the probability of bad actions. However, the **clipping** prevents the policy from making overly large updates, which could destabilize training or cause the agent to forget previously learned behaviors. This ensures more stable and reliable learning by constraining the change in the policy’s probability ratio within a safe range of
+
+$$[1 - \epsilon, 1 + \epsilon]$$
 
 I included the two analytic plots (tracked using `wandb`) from training PPO on [Cartpole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/), one of the simplest classic control games (balancing a pole on a cart):
 
@@ -165,27 +171,28 @@ An increasing reward and decreasing KL divergence indicate that the agent is lea
 I find it helpful to note that these preprocessing techniques are useful when adapting RL algorithms to Atari games such as `BreakoutNoFrameskip-v4`:
 
 {{< highlight python "linenos=inline">}}
+
 # note: this assumes you use vectorized gym environments (since it's for ppo)
+
 def make_env(gym_id, seed, idx, capture_video, run_name):
-    def thunk():
-        env = gym.make(gym_id)
-        env = gym.wrappers.RecordEpisodeStatistics(env)
-        if capture_video:
-            if idx == 0:
-                env = gym.wrappers.RecordVideo(env, f"videos/{run_name}")
-        env = NoopResetEnv(env, noop_max=30) # no-op for a random number of steps, adds stochasticity
-        env = MaxAndSkipEnv(env, skip=4) # skip 4 frames and repeat the action to save computation
-        env = EpisodicLifeEnv(env) # end the episode when a life is lost
-        if "FIRE" in env.unwrapped.get_action_meanings():
-            env = FireResetEnv(env) # press FIRE button at the beginning of the episode
-        env = ClipRewardEnv(env) # clip the reward to -1, 0, 1
-        # original: 210x160x3, resized: 84x84x4
-        env = gym.wrappers.ResizeObservation(env, (84, 84)) # resize the observation to 84x84
-        env = gym.wrappers.GrayscaleObservation(env) # convert the observation to grayscale
-        env = gym.wrappers.FrameStackObservation(env, 4) # stack 4 frames together
-        env.action_space.seed(seed)
-        env.observation_space.seed(seed)
-        return env
+def thunk():
+env = gym.make(gym_id)
+env = gym.wrappers.RecordEpisodeStatistics(env)
+if capture_video:
+if idx == 0:
+env = gym.wrappers.RecordVideo(env, f"videos/{run_name}")
+env = NoopResetEnv(env, noop_max=30) # no-op for a random number of steps, adds stochasticity
+env = MaxAndSkipEnv(env, skip=4) # skip 4 frames and repeat the action to save computation
+env = EpisodicLifeEnv(env) # end the episode when a life is lost
+if "FIRE" in env.unwrapped.get_action_meanings():
+env = FireResetEnv(env) # press FIRE button at the beginning of the episode
+env = ClipRewardEnv(env) # clip the reward to -1, 0, 1 # original: 210x160x3, resized: 84x84x4
+env = gym.wrappers.ResizeObservation(env, (84, 84)) # resize the observation to 84x84
+env = gym.wrappers.GrayscaleObservation(env) # convert the observation to grayscale
+env = gym.wrappers.FrameStackObservation(env, 4) # stack 4 frames together
+env.action_space.seed(seed)
+env.observation_space.seed(seed)
+return env
 return thunk
 {{</ highlight >}}
 
@@ -201,12 +208,12 @@ return thunk
 
 - The following research papers to understand popular RL algorithms:
 
-    - [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
+  - [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
 
-    - [Human-level control through deep reinforcement learning](https://www.nature.com/articles/nature14236)
+  - [Human-level control through deep reinforcement learning](https://www.nature.com/articles/nature14236)
 
-    - [Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971)
+  - [Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971)
 
-    - [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
+  - [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
 
-    - [High-Dimensional Continuous Control Using Generalized Advantage Estimation](https://arxiv.org/abs/1506.02438)
+  - [High-Dimensional Continuous Control Using Generalized Advantage Estimation](https://arxiv.org/abs/1506.02438)
