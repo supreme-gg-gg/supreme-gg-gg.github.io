@@ -16,7 +16,7 @@ pygmentsCodefencesGuessSyntax = true
   [Services.Disqus]
     # Shortname = "XXX"
   [Services.googleAnalytics]
-    # id = "G-XH1QM49J4"
+    # id = "G-VFK4B3BBVX"
 
 [privacy]
   [privacy.googleAnalytics]
