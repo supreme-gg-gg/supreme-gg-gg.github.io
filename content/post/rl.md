@@ -158,7 +158,6 @@ $$[1 - \epsilon, 1 + \epsilon]$$
 
 I included the two analytic plots (tracked using `wandb`) from training PPO on [Cartpole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/), one of the simplest classic control games (balancing a pole on a cart):
 
-{{< columns >}}
 {{< figure link="/img/rl/ppo_reward.png" caption="PPO Reward in one environment">}}
 {{< column >}}
 {{< figure link="/img/rl/ppo_kl.png" caption="PPO KL Divergence">}}
@@ -175,25 +174,25 @@ I find it helpful to note that these preprocessing techniques are useful when ad
 # note: this assumes you use vectorized gym environments (since it's for ppo)
 
 def make_env(gym_id, seed, idx, capture_video, run_name):
-def thunk():
-env = gym.make(gym_id)
-env = gym.wrappers.RecordEpisodeStatistics(env)
-if capture_video:
-if idx == 0:
-env = gym.wrappers.RecordVideo(env, f"videos/{run_name}")
-env = NoopResetEnv(env, noop_max=30) # no-op for a random number of steps, adds stochasticity
-env = MaxAndSkipEnv(env, skip=4) # skip 4 frames and repeat the action to save computation
-env = EpisodicLifeEnv(env) # end the episode when a life is lost
-if "FIRE" in env.unwrapped.get_action_meanings():
-env = FireResetEnv(env) # press FIRE button at the beginning of the episode
-env = ClipRewardEnv(env) # clip the reward to -1, 0, 1 # original: 210x160x3, resized: 84x84x4
-env = gym.wrappers.ResizeObservation(env, (84, 84)) # resize the observation to 84x84
-env = gym.wrappers.GrayscaleObservation(env) # convert the observation to grayscale
-env = gym.wrappers.FrameStackObservation(env, 4) # stack 4 frames together
-env.action_space.seed(seed)
-env.observation_space.seed(seed)
-return env
-return thunk
+    def thunk():
+        env = gym.make(gym_id)
+        env = gym.wrappers.RecordEpisodeStatistics(env)
+        if capture_video:
+            if idx == 0:
+                env = gym.wrappers.RecordVideo(env, f"videos/{run_name}")
+                env = NoopResetEnv(env, noop_max=30) # no-op for a random number of steps, adds stochasticity
+                env = MaxAndSkipEnv(env, skip=4) # skip 4 frames and repeat the action to save computation
+                env = EpisodicLifeEnv(env) # end the episode when a life is lost
+        if "FIRE" in env.unwrapped.get_action_meanings():
+            env = FireResetEnv(env) # press FIRE button at the beginning of the episode
+            env = ClipRewardEnv(env) # clip the reward to -1, 0, 1 # original: 210x160x3, resized: 84x84x4
+            env = gym.wrappers.ResizeObservation(env, (84, 84)) # resize the observation to 84x84
+            env = gym.wrappers.GrayscaleObservation(env) # convert the observation to grayscale
+            env = gym.wrappers.FrameStackObservation(env, 4) # stack 4 frames together
+            env.action_space.seed(seed)
+            env.observation_space.seed(seed)
+        return env
+    return thunk
 {{</ highlight >}}
 
 ## Resources

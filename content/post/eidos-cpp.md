@@ -91,7 +91,7 @@ Alongside this process, we referenced a lot of course materials, textbooks, onli
 |CMake|Build system for compiling the project|
 |Google Test|Unit testing framework for C++|
 
-Sometimes, the best way to learn is to build something from scratch. Even though this likely isn't a library you would use in production, the knowledge gained from building it is invaluable. 
+Sometimes, the best way to learn is to build something from scratch. Even though this likely isn't a library you would use in production, the knowledge gained from building it is invaluable.
 
 **Furthermore, I am now 100x more grateful for the existence of PyTorch and TensorFlow after going through the ordeal of doing everything from scratch.**
 

@@ -11,7 +11,7 @@ Paul, Nelson, and I built Memory Make by taking the unconventional route, steppi
 
 {{< gallery caption-effect="fade" >}}
 {{< figure link="/img/memory/temple.png">}}
-{{< figure link="/img/memory/qhacks.jpg">}}
+{{< figure link="/img/memory/qhacks.JPG">}}
 {{< figure link="/img/memory/pipe.png">}}
 {{< /gallery >}}
 
