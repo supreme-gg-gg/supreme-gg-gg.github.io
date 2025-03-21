@@ -8,7 +8,7 @@ My name is Jet Chiang. I grew up in Hong Kong and I am now studying at the Unive
 
 > "Devote the rest of your life to making progress." -- Epictetus
 
-{{< button url="https://drive.google.com/file/d/1Akw4PJuJ-ddLfbTpmsy4w4PJGI237pCe/view?usp=sharing" >}}Resume Download{{< /button >}}
+{{< button url="https://drive.google.com/file/d/1ofM3UZ43kr2m6Jpy5V-_gKnVgGKMYZq8/view?usp=sharing" >}}Resume Download{{< /button >}}
 
 ## Interests
 
