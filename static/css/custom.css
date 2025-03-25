@@ -1,24 +1,76 @@
 .icon-wall {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.icon-wall-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  justify-content: flex-start !important;
+  text-align: left !important;
+  align-items: flex-start !important;
 }
 
 .icon-wall .icon {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.3s, filter 0.3s;
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
 }
 
 .icon-wall .icon:hover {
   transform: scale(1.2);
-  filter: brightness(1.2);
+}
+
+.icon-wall-category-h4 {
+  font-size: 1.3em;
+  margin: 1rem 0;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  justify-content: flex-start !important; /* Added !important to override any conflicting styles */
+  text-align: left !important;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.project-skills .skill-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.project-skills .skill-icon:hover {
+  transform: scale(1.2);
+}
+
+.project-skills .skill-text,
+.icon-wall .skill-text {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.project-tech-stack {
+  margin: 1rem 0;
 }
 
 .custom-button {
-  background-color: #404040; /* Dark gray for light mode */
+  background-color: #404040;
   color: white;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -33,31 +85,30 @@
 
 .custom-button:hover,
 .custom-button:focus {
-  background-color: #333333; /* Slightly darker gray for hover effect */
-  transform: translateY(-2px); /* Lift effect on hover */
+  background-color: #333333;
+  transform: translateY(-2px);
 }
 
 .custom-button:active {
-  background-color: #282828; /* Even darker gray for active state */
+  background-color: #282828;
 }
 
 @media (prefers-color-scheme: dark) {
   .custom-button {
-    background-color: #f0f0f0; /* Light gray for dark mode */
-    color: #404040; /* Dark text in dark mode */
+    background-color: #f0f0f0;
+    color: #404040;
   }
 
   .custom-button:hover,
   .custom-button:focus {
-    background-color: #dcdcdc; /* Lightened hover color in dark mode */
+    background-color: #dcdcdc;
   }
 
   .custom-button:active {
-    background-color: #b8b8b8; /* Darker light gray for active state in dark mode */
+    background-color: #b8b8b8;
   }
 }
 
-/* General Timeline Styles */
 .timeline {
   position: relative;
   max-width: 1200px;
@@ -69,54 +120,56 @@
 }
 
 .timeline:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #ddd;  /* Subtle vertical line color */
+  background-color: #ddd;
   transform: translateX(-50%);
 }
 
-/* Each Timeline Event */
 .timeline-event {
   position: relative;
   width: 80%;
   margin: 20px 0;
   padding: 20px;
-  background-color: #fff; /* White background for the card */
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for the card effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .timeline-event:nth-child(even) {
-  align-self: flex-end; /* Even events will align to the right */
+  align-self: flex-end;
 }
 
 .timeline-event:nth-child(odd) {
-  align-self: flex-start; /* Odd events will align to the left */
+  align-self: flex-start;
 }
 
-/* Timeline Event Title */
 .timeline-title {
   font-size: 1.5em;
   font-weight: bold;
-  color: #333; /* Dark color for title */
+  color: #333;
   margin-bottom: 10px;
 }
 
-/* Timeline Event Date */
+.timeline-company {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 5px;
+}
+
 .timeline-date {
   font-size: 0.9em;
-  color: #888; /* Lighter color for the date */
+  color: #888;
   margin-bottom: 15px;
 }
 
-/* Timeline Event Description */
 .timeline-description {
   font-size: 1em;
   color: #444;
@@ -124,14 +177,63 @@
   margin-bottom: 0;
 }
 
-/* Adding Responsiveness */
 @media (max-width: 768px) {
   .timeline-event {
-    width: 90%; /* More space on small screens */
+    width: 90%;
   }
 
   .timeline-event:nth-child(even),
   .timeline-event:nth-child(odd) {
-    align-self: center; /* Stack events in the center on small screens */
+    align-self: center;
   }
+}
+
+.gallery {
+    overflow: hidden;
+    margin: 10px auto;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery .box {
+    float: left;
+    position: relative;
+    width: 32%;
+    padding-bottom: 32%;
+    margin-bottom: 1%;
+}
+
+@media only screen and (max-width: 767px) {
+    .gallery .box {
+        width: 48%;
+        padding-bottom: 48%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .gallery .box {
+        width: 100%;
+        padding-bottom: 100%;
+    }
+}
+
+.gallery figure {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+}
+
+.gallery .img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
