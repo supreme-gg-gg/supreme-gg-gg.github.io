@@ -2,8 +2,8 @@
 title: MemoryMake
 subtitle: Turn single 2D photos into immersive, navigable 3D worlds
 date: 2025-01-26
-tags: ["full-stack", "hackathon", "machine-learning", "python"]
-skills: ["Python", "FastAPI", "React", "PyTorch", "Tensorflow"]
+tags: ["full-stack", "hackathon", "machine-learning", "genai"]
+skills: ["FastAPI", "React", "PyTorch", "Tensorflow"]
 ---
 
 As memories pile up in our camera rolls or remain abstract ideas, we wanted to create a way to truly experience them. MemoryMake was born from the idea of transforming ordinary photos and text prompts into dynamic, navigable, and visually engaging 3D environments—so users can explore their cherished moments instead of merely scrolling past them.
