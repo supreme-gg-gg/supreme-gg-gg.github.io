@@ -92,10 +92,10 @@ skills:
     name: Socketio
     icon: socketio/socketio-original.svg
     category: Frameworks
-  hugo:
-    name: Hugo
-    icon: hugo/hugo-original.svg
-    category: Frameworks
+  # hugo:
+  #   name: Hugo
+  #   icon: hugo/hugo-original.svg
+  #   category: Frameworks
   graphql:
     name: GraphQL
     icon: graphql/graphql-plain.svg
@@ -168,6 +168,10 @@ skills:
   git:
     name: Git
     icon: git/git-original.svg
+    category: DevTools
+  postman:
+    name: Postman
+    icon: postman/postman-original.svg
     category: DevTools
   vim:
     name: Vim
