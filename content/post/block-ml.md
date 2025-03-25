@@ -2,11 +2,12 @@
 title: Block ML
 subtitle: Scratch for Neural Networks (IgnitionHacks)
 date: 2024-08-25
-tags: ["javascript", "full-stack", "hackathon"]
+tags: ["full-stack", "hackathon"]
+skills: ["JavaScript", "Node", "Express", "Keras"]
 ---
 
 {{< columns >}}
-Most programmers were introduced to coding through Scratch, a block-based programming language that simplifies the process of buliding games, animations, and stories. 
+Most programmers were introduced to coding through Scratch, a block-based programming language that simplifies the process of buliding games, animations, and stories.
 
 Using the same framework that made Scratch (Google Blockly), we made block based programming more impactful by creating a platform that allows users to build and train neural networks without writing a single line of code.
 {{< column >}}

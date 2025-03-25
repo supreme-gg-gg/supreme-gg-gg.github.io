@@ -2,7 +2,8 @@
 title: Pendulum Tracking
 subtitle: OpenCV for PHY180 Lab
 date: 2024-09-28
-tags: ["python", "machine-learning", "cv"]
+tags: ["machine-learning", "cv"]
+skills: ["Python", "OpenCV", "Matplotlib", "NumPy"]
 ---
 
 Using OpenCV, I made my own script to track the motion of a pendulum in for my PHY180 (Mechanics) lab. The script detects the pendulum bob and track its motion in real-time for a directory of videos (samples taken) using `cv2`. The module supports:

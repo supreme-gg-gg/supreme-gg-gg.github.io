@@ -8,6 +8,8 @@ comments: false
 
 {{< timeline >}}
 
+{{< button url="https://drive.google.com/file/d/1ofM3UZ43kr2m6Jpy5V-_gKnVgGKMYZq8/view?usp=sharing" >}}Resume Download{{< /button >}}
+
 ## 🎓 Courses
 
 | Name                                | Description                                                       | Attendance               |
@@ -17,7 +19,7 @@ comments: false
 | **ECE1508 (Applied Deep Learning)** | Comprehensive study of DL from MLP to variational autoencoders    | Fall 2024, Audited       |
 | **CS229 (Machine Learning)**        | Intro to ML and statistical pattern recognition (Stanford online) | Self-studied Summer 2024 |
 
-## 🏅 Awards
+<!-- ## 🏅 Awards
 
 I enjoy participating in academic contests because they challenge me to think critically and creatively. Furthermore, I find it very exciting to learn about new things in different fields of study and solve problems that I have never encountered before. Here are some of the awards I have won:
 
@@ -50,7 +52,7 @@ Learning about business and entrepreneurship is one of my passions. They provide
 > Conducted market and operational research for recruitment and employment practices of a local optical business.
 
 > **X-Culture Consulting Challenge** (Mar 2024)  
-> Awarded Best Team among 5000 undergrad and MBA students. Presented our report to the CEO of an American eCommerce service company.
+> Awarded Best Team among 5000 undergrad and MBA students. Presented our report to the CEO of an American eCommerce service company. -->
 
 ## 🤝 Volunteering
 

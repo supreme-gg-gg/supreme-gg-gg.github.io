@@ -2,7 +2,8 @@
 title: Scholar Link
 subtitle: Find and Explore Relevant Research Papers (HTV9)
 date: 2024-10-06
-tags: ["hackathon", "nlp", "full-stack", "javascript", "genAI"]
+tags: ["hackathon", "nlp", "full-stack", "genAI"]
+skills: ["Flask", "Python", "Streamlit", "React"]
 ---
 
 How can we make research more accessible, insightful, and engaging for researchers and students? Eddy, Chi, Jay, and I came up with an innovative web application that leverages cutting-edge AI to visualize connections between papers in a force-directed graph.

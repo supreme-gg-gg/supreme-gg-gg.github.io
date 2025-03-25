@@ -3,6 +3,7 @@ title: TaskForce
 subtitle: Be more productive, or get roasted by AI (UofTHacks)
 date: 2025-01-18
 tags: ["full-stack", "hackathon", "genAI"]
+skills: ["Flask", "Electron", "Firebase", "Redis", "Socketio", "Python"]
 ---
 
 Ever gone on LinkedIn and all you saw was “I’m happy to share that I will be working at `{Google, Microsoft, Meta, Tesla, etc}` this summer”. You probably thought to yourself, “Wow, I really have to start working harder.” That feeling – the urge to level up your own productivity – is a powerful motivator. We recognized this common experience and decided to harness it.

@@ -2,7 +2,8 @@
 title: MapMatch
 subtitle: Finding roommates with NLP powered by AWS
 date: 2024-12-31
-tags: ["python", "machine-learning", "hackathon"]
+tags: ["machine-learning", "hackathon"]
+skills: ["AWS", "postgresql", "TypeScript", "Supabase", "Express"]
 ---
 
 Cosine similarity is a simple way to measure how similar two vectors are, yet it inspired my team to come up with an unique solution to the complex roomate matching problem at AWS Hackathon hosted by IEEE UofT.

@@ -2,7 +2,7 @@
 title: Eidos
 subtitle: Building a C++ Deep Learning Library from Scratch
 date: 2024-12-31
-tags: ["cpp", "machine-learning", "personal-projects"]
+tags: ["machine-learning", "personal-projects"]
 bigimg: [{src: "/img/eidos/bg.png", desc: "MNIST Handwritten Digits Dataset"}]
 ---
 
