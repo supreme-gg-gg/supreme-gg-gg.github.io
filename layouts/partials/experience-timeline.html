@@ -2,6 +2,7 @@
   {{ range site.Data.experience }}
     <div class="timeline-event">
       <div class="timeline-title">{{ .title }}</div>
+      <div class="timeline-company">{{ .company }}</div>
       <div class="timeline-date">
         {{ with .start }}{{ . | dateFormat "Jan 2006" }}{{ end }} – 
         {{ with .end }}

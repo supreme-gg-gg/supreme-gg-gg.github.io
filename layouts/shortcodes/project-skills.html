@@ -1,0 +1,16 @@
+{{ $skillsParam := .Get 0 | default (.Page.Params.skills) }}
+{{ $skills := slice }}
+
+{{ if eq (printf "%T" $skillsParam) "string" }}
+  {{ $skills = split $skillsParam "," }}
+{{ else }}
+  {{ $skills = $skillsParam }}
+{{ end }}
+
+{{ if $skills }}
+<div class="project-skills">
+  {{ range $skills }}
+    {{ partial "skill-icon.html" (dict "skill" . "iconClass" "skill-icon" "page" $.Page "site" $.Site) }}
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,7 @@
+{{ if .Params.skills }}
+<div class="project-skills">
+  {{ range .Params.skills }}
+    {{ partial "skill-icon.html" (dict "skill" . "iconClass" "skill-icon" "page" $.Page "site" $.Site) }}
+  {{ end }}
+</div>
+{{ end }}

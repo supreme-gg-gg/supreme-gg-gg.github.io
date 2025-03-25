@@ -1,0 +1,199 @@
+skills:
+  python:
+    name: Python
+    icon: python/python-original.svg
+    category: Languages
+  c:
+    name: C
+    icon: c/c-original.svg
+    category: Languages
+  cpp:
+    name: C++
+    icon: cplusplus/cplusplus-original.svg
+    category: Languages
+  go:
+    name: Go
+    icon: go/go-original-wordmark.svg
+    category: Languages
+  swift:
+    name: Swift
+    icon: swift/swift-original.svg
+    category: Languages
+  javascript:
+    name: JavaScript
+    icon: javascript/javascript-original.svg
+    category: Languages
+  typescript:
+    name: TypeScript
+    icon: typescript/typescript-original.svg
+    category: Languages
+  html:
+    name: HTML
+    icon: html5/html5-original.svg
+    category: Languages
+  # css:
+  #   name: CSS
+  #   icon: css3/css3-original.svg
+  #   category: Languages
+  matlab:
+    name: Matlab
+    icon: matlab/matlab-original.svg
+    category: Languages
+  latex:
+    name: LaTeX
+    icon: latex/latex-original.svg
+    category: Languages
+  postgresql:
+    name: PostgreSQL
+    icon: postgresql/postgresql-original-wordmark.svg
+    category: Languages
+  # Frameworks
+  react:
+    name: React
+    icon: react/react-original.svg
+    category: Frameworks
+  electron:
+    name: Electron
+    icon: electron/electron-original.svg
+    category: Frameworks
+  streamlit:
+    name: Streamlit
+    icon: streamlit/streamlit-original.svg
+    category: Frago/go-original-wordmark.svgmeworks
+  node:
+    name: Node
+    icon: nodejs/nodejs-original-wordmark.svg
+    category: Frameworks
+  express:
+    name: Express
+    icon: express/express-original.svg
+    category: Frameworks
+  flask:
+    name: Flask
+    icon: flask/flask-original.svg
+    category: Frameworks
+  fastapi:
+    name: FastAPI
+    icon: fastapi/fastapi-original.svg
+    category: Frameworks
+  firebase:
+    name: Firebase
+    icon: firebase/firebase-plain.svg
+    category: Frameworks
+  supabase:
+    name: Supabase
+    icon: supabase/supabase-original.svg
+    category: Frameworks
+  redis:
+    name: Redis
+    icon: redis/redis-original.svg
+    category: Frameworks
+  socketio:
+    name: Socketio
+    icon: socketio/socketio-original.svg
+    category: Frameworks
+  hugo:
+    name: Hugo
+    icon: hugo/hugo-original.svg
+    category: Frameworks
+  graphql:
+    name: GraphQL
+    icon: graphql/graphql-plain.svg
+    category: Frameworks
+
+  # Platforms
+  aws:
+    name: AWS
+    icon: amazonwebservices/amazonwebservices-original-wordmark.svg
+    category: PlatformTools
+  gcp:
+    name: GCP
+    icon: googlecloud/googlecloud-original.svg
+    category: PlatformTools
+  arduinoide:
+    name: Arduino IDE
+    icon: arduino/arduino-original.svg
+    category: PlatformTools
+  raspberry:
+    name: Raspberry Pi
+    icon: raspberrypi/raspberrypi-original.svg
+    category: PlatformTools
+  pypi:
+    name: PyPI
+    icon: pypi/pypi-original.svg
+    category: PlatformTools
+  kubernetes: 
+    name: Kubernetes
+    icon: kubernetes/kubernetes-original.svg
+    category: PlatformTools
+  docker:
+    name: Docker
+    icon: docker/docker-original-wordmark.svg
+    category: PlatformTools
+
+  # Data Analysis & ML
+  pandas:
+    name: Pandas
+    icon: pandas/pandas-original.svg
+    category: DataML
+  numpy:
+    name: NumPy
+    icon: numpy/numpy-original.svg
+    category: DataML
+  matplotlib:
+    name: Matplotlib
+    icon: matplotlib/matplotlib-original.svg
+    category: DataML
+  scikit-learn:
+    name: Scikit-learn
+    icon: scikitlearn/scikitlearn-original.svg
+    category: DataML
+  pytorch:
+    name: PyTorch
+    icon: pytorch/pytorch-original.svg
+    category: DataML
+  tensorflow:
+    name: TensorFlow
+    icon: tensorflow/tensorflow-original.svg
+    category: DataML
+  keras:
+    name: Keras
+    icon: keras/keras-original.svg
+    category: DataML
+  opencv:
+    name: OpenCV
+    icon: opencv/opencv-original.svg
+    category: DataML
+  # Developer Tools
+  git:
+    name: Git
+    icon: git/git-original.svg
+    category: DevTools
+  vim:
+    name: Vim
+    icon: vim/vim-original.svg
+    category: DevTools
+  neovim:
+    name: Neovim
+    icon: neovim/neovim-original.svg
+    category: DevTools
+  bash:
+    name: UNIX Scripting
+    icon: bash/bash-original.svg
+    category: DevTools
+  cmake:
+    name: CMake
+    icon: cmake/cmake-original.svg
+    category: DevTools
+  jenkins:
+    name: Jenkins
+    icon: jenkins/jenkins-original.svg
+    category: DevTools
+  jest:
+    name: Jest
+    icon: jest/jest-plain.svg
+    category: DevTools
+  pytest:
+    name: PyTest
+    icon: pytest/pytest-original.svg
+    category: DevTools

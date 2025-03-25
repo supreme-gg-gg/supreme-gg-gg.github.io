@@ -1,0 +1,21 @@
+{{ $skill := .skill | lower | strings.TrimSpace }}
+{{ $iconClass := .iconClass | default "skill-icon" }}
+{{ $baseURL := "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" }}
+
+{{ if isset . "site" }}
+  {{ $skillsData := index .site.Data.skills.skills $skill }}
+  
+  {{ if $skillsData }}
+    <img
+      src="{{ $baseURL }}{{ $skillsData.icon }}"
+      alt="{{ $skillsData.name }}"
+      title="{{ $skillsData.name }}"
+      class="{{ $iconClass }}"
+    />
+  {{ else }}
+    <span class="skill-text">{{ $skill }}</span>
+  {{ end }}
+{{ else }}
+  <!-- Fallback if site data is not available -->
+  <span class="skill-text">{{ $skill }}</span>
+{{ end }}

@@ -1,270 +1,64 @@
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-/>
-
 <div class="icon-wall">
-  <!-- Languages -->
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-    alt="Python"
-    title="Python"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
-    alt="C/C++"
-    title="C/C++"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
-    alt="C/C++"
-    title="C/C++"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg"
-    alt="Swift"
-    title="Swift"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-    alt="JavaScript"
-    title="JavaScript"
-    class="icon"
-  />
+  <h4 class="icon-wall-category-h4">Languages</h4>
+  <div class="icon-wall-category">
+    {{ range $key, $skill := site.Data.skills.skills }}
+      {{ if eq $skill.category "Languages" }}
+        {{ partial "skill-icon.html" (dict "skill" $key "iconClass" "icon" "site" $.Site) }}
+      {{ end }}
+    {{ end }}
+  </div>
 
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-    alt="TypeScript"
-    title="TypeScript"
-    class="icon"
-  />
+  <h4 class="icon-wall-category-h4">Frameworks</h4>
+  <div class="icon-wall-category">
+    {{ range $key, $skill := site.Data.skills.skills }}
+      {{ if eq $skill.category "Frameworks" }}
+        {{ partial "skill-icon.html" (dict "skill" $key "iconClass" "icon" "site" $.Site) }}
+      {{ end }}
+    {{ end }}
+  </div>
 
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-    alt="HTML"
-    title="HTML"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-    alt="CSS"
-    title="CSS"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg"
-    alt="Matlab"
-    title="Matlab"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg"
-    alt="LaTeX"
-    title="LaTeX"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg"
-    alt="PostgreSQL"
-    title="PostgreSQL"
-    class="icon"
-  />
+  <h4 class="icon-wall-category-h4">Platform and Tools</h4>
+  <div class="icon-wall-category">
+    {{ range $key, $skill := site.Data.skills.skills }}
+      {{ if eq $skill.category "PlatformTools" }}
+        {{ partial "skill-icon.html" (dict "skill" $key "iconClass" "icon" "site" $.Site) }}
+      {{ end }}
+    {{ end }}
+  </div>
+  
+  <h4 class="icon-wall-category-h4">Data Analysis & ML</h4>
+  <div class="icon-wall-category">
+    {{ range $key, $skill := site.Data.skills.skills }}
+      {{ if eq $skill.category "DataML" }}
+        {{ partial "skill-icon.html" (dict "skill" $key "iconClass" "icon" "site" $.Site) }}
+      {{ end }}
+    {{ end }}
+  </div>
 
-  <!-- Frameworks -->
+  <h4 class="icon-wall-category-h4">Developer Tools</h4>
+  <div class="icon-wall-category">
+    {{ range $key, $skill := site.Data.skills.skills }}
+      {{ if eq $skill.category "DevTools" }}
+        {{ partial "skill-icon.html" (dict "skill" $key "iconClass" "icon" "site" $.Site) }}
+      {{ end }}
+    {{ end }}
+  </div>
 
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-    alt="React"
-    title="React"
-    class="icon"
-  />
+  {{ $hasUncategorized := false }}
+  {{ range $key, $skill := site.Data.skills.skills }}
+    {{ if not $skill.category }}
+      {{ $hasUncategorized = true }}
+    {{ end }}
+  {{ end }}
 
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg"
-    alt="Electron"
-    title="Electron"
-    class="icon"
-  />
-
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg"
-    alt="Streamlit"
-    title="Streamlit"
-    class="icon"
-  />
-
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
-    alt="Node.js"
-    title="Node.js"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
-    alt="Express.js"
-    title="Express.js"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
-    alt="Flask"
-    title="Flask"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
-    alt="FastAPI"
-    title="FastAPI"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg"
-    alt="Firebase"
-    title="Firebase"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
-    alt="Redis"
-    title="Redis"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg"
-    alt="Socket.io"
-    title="Socket.io"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-    alt="AWS"
-    title="AWS"
-    class="icon"
-  />
-
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hugo/hugo-original.svg"
-    alt="Hugo"
-    title="Hugo"
-    class="icon"
-  />
-
-  <!-- Data Analysis & ML -->
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"
-    alt="Pandas"
-    title="Pandas"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg"
-    alt="NumPy"
-    title="NumPy"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg"
-    alt="Matplotlib"
-    title="Matplotlib"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
-    alt="Scikit-learn"
-    title="Scikit-learn"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg"
-    alt="PyTorch"
-    title="PyTorch"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
-    alt="TensorFlow"
-    title="TensorFlow"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg"
-    alt="Keras"
-    title="Keras"
-    class="icon"
-  />
-
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg"
-    alt="OpenCV"
-    title="OpenCV"
-    class="icon"
-  />
-
-  <!-- Developer Tools -->
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-    alt="Git"
-    title="Git"
-    class="icon"
-  />
-
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vim/vim-original.svg"
-    alt="Vim"
-    title="Vim"
-    class="icon"
-  />
-
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg"
-    alt="Neovim"
-    title="Neovim"
-    class="icon"
-  />
-
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"
-    alt="UNIX Scripting"
-    title="UNIX Scripting"
-    class="icon"
-  />
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cmake/cmake-original.svg"
-    alt="CMake"
-    title="CMake"
-    class="icon"
-  />
-
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg"
-    alt="Docker"
-    title="Docker"
-    class="icon"
-  />
-
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg"
-    alt="Jenkins"
-    title="Jenkins"
-    class="icon"
-  />
-
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg"
-    alt="Arduino"
-    title="Arduino"
-    class="icon"
-  />
-
-  <img
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pypi/pypi-original.svg"
-    alt="PyPI"
-    title="PyPI"
-    class="icon"
-  />
+  {{ if $hasUncategorized }}
+    <h4 class="icon-wall-category-h4">Other</h4>
+    <div class="icon-wall-category">
+      {{ range $key, $skill := site.Data.skills.skills }}
+        {{ if not $skill.category }}
+          {{ partial "skill-icon.html" (dict "skill" $key "iconClass" "icon" "site" $.Site) }}
+        {{ end }}
+      {{ end }}
+    </div>
+  {{ end }}
 </div>
