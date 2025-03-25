@@ -159,10 +159,10 @@ $$[1 - \epsilon, 1 + \epsilon]$$
 
 I included the two analytic plots (tracked using `wandb`) from training PPO on [Cartpole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/), one of the simplest classic control games (balancing a pole on a cart):
 
+{{< gallery caption-effect="fade" >}}
 {{< figure link="/img/rl/ppo_reward.png" caption="PPO Reward in one environment">}}
-{{< column >}}
 {{< figure link="/img/rl/ppo_kl.png" caption="PPO KL Divergence">}}
-{{< endcolumns >}}
+{{< /gallery >}}
 
 An increasing reward and decreasing KL divergence indicate that the agent is learning to balance the pole effectively. To be particular, the **KL divergence** measures the difference between the old and new policy, and a small value indicates that the policy is not changing too much, which is the advantage of PPO.
 

@@ -8,8 +8,6 @@ skills: ["JavaScript", "Node", "Express", "Keras"]
 
 {{< columns >}}
 Most programmers were introduced to coding through Scratch, a block-based programming language that simplifies the process of buliding games, animations, and stories.
-
-Using the same framework that made Scratch (Google Blockly), we made block based programming more impactful by creating a platform that allows users to build and train neural networks without writing a single line of code.
 {{< column >}}
 {{< figure src="/img/block/editor.png" alt="Scratch-like editor" >}}
 {{< endcolumns >}}

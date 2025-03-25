@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article class="post blog-post">
-        <header>
+        <!-- <header>
           <h1>{{ .Title }}</h1>
           {{ with .Params.description }}
           <div class="post-description">{{ . }}</div>
@@ -23,13 +23,13 @@
             </span>
             {{ end }}
           </div>
-        </header>
+        </header> -->
 
-        {{ if .Params.skills }}
+        <!-- {{ if .Params.skills }}
           <div class="project-tech-stack">
             {{ partial "project-skills.html" . }}
           </div>
-        {{ end }}
+        {{ end }}  -->
         
         <div class="post-content">
           {{ .Content }}
