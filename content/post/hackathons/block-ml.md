@@ -1,20 +1,18 @@
 ---
 title: Block ML
-subtitle: Scratch for Neural Networks (IgnitionHacks)
+subtitle: Drag and drop neural network builder like Scratch
 date: 2024-08-25
-tags: ["full-stack", "hackathon"]
+tags: ["full-stack", "hackathon", "machine-learning"]
 skills: ["JavaScript", "Node", "Express", "Keras"]
 ---
 
-{{< columns >}}
-Most programmers were introduced to coding through Scratch, a block-based programming language that simplifies the process of buliding games, animations, and stories.
-{{< column >}}
-{{< figure src="/img/block/editor.png" alt="Scratch-like editor" >}}
-{{< endcolumns >}}
+Most programmers were introduced to coding through Scratch, a block-based programming language that simplifies the process of buliding games, animations, and stories. Why not make machine learning as easy as Scratch, or even better -- directly with the framework that made Scratch? (IgnitionHacks)
+
+{{< figure src="/img/block/demo.png" alt="Scratch-like editor" width="70%">}}
 
 <!--more-->
 
-Machine Learning shouldn't be limited to experienced software engineers, computer science majors, or other elites. It should be accessible to everyone, regardless of their background or knowledge in CS. 
+Machine Learning shouldn't be limited to experienced software engineers, computer science majors, or other elites. It should be accessible to everyone, regardless of their background or knowledge in CS.
 
 Our goal is to empower individuals to design, build, and deploy ML models, enabling them to solve problems with creativity and innovation. This project is a prototype web app that caters to both researchers and business professionals seeking quick, low-cost ML solutions, and students eager to explore AI through a Scratch-like block programming interface.
 

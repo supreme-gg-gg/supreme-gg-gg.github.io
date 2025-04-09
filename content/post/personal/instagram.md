@@ -66,4 +66,4 @@ Our in-chat TUI commands include view images and videos, replying to messages, s
 
 We built this with `curses, typer` and we would like to acknowledge `instagrapi` for reverse engineering the Instagram API.
 
-{{< button url="https://github.com/supreme-gg-gg/instagram-cli/tree/main" >}}Checkout our devpost{{< /button >}}
+{{< button url="https://github.com/supreme-gg-gg/instagram-cli/tree/main" >}}Star our repo!{{< /button >}}

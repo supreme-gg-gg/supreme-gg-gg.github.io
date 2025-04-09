@@ -4,7 +4,7 @@ subtitle: Duolingo for Sleep
 date: 2024-06-01
 tags: ["personal-projects", "ios"]
 disable_header: false
-skills: ["Swift", "Firebase", "Express"]
+skills: ["Swift", "XCode", "Firebase", "Express"]
 ---
 
 Sleep deprivation is a widespread issue, expected to worsen as distractions increase. Despite understanding sleep's benefits, many find it challenging to maintain a healthy night routine. This is especially prominant for students who later face difficulties in focusing and retaining information.
