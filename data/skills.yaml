@@ -173,6 +173,10 @@ skills:
     name: Postman
     icon: postman/postman-original.svg
     category: DevTools
+  xcode:
+    name: Xcode
+    icon: xcode/xcode-original.svg
+    category: DevTools
   vim:
     name: Vim
     icon: vim/vim-original.svg

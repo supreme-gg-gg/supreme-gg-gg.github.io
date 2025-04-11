@@ -8,7 +8,7 @@ tags: ["machine-learning", "cv", "ios", "hardware"]
 
 As the final design project of my Praxis II course, I worked with the Toronto Bonsai Society to develop **Bonsense**, an iOS application that helps bonsai beginners monitor the moisture levels of their plants using computer vision and IoT sensor. We hope that this can make the art of bonsai more accessible to everyone.
 
-{{< figure link="/img/bonsense/bonsense.png">}}
+{{< figure link="/img/bonsense/Bonsense.png">}}
 
 <!--more-->
 
