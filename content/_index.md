@@ -4,7 +4,7 @@ disable_header: true
 
 {{< hello-world >}}
 
-I am a first year undergraduate student studying [Engineering Science](https://engsci.utoronto.ca/program/what-is-engsci/) at the University of Toronto. With software engineering internships and machine learning research experience, I am passionate to innovate about ML and its applications in interdisciplinary fields such as fintech and biomedical engineering.
+I am a first year undergraduate student studying [Engineering Science](https://engsci.utoronto.ca/program/what-is-engsci/) at the University of Toronto. With multiple software engineering internships and machine learning research experience, I am passionate to innovate about ML and its applications such as scientific machine learning (SciML), robotics, and biotechnology.
 
 Outside of hackathons, design teams, and personal projects, I enjoy learning and trying random cool stuff and reading classic literature and philosophy.
 
