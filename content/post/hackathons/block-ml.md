@@ -8,7 +8,7 @@ skills: ["JavaScript", "Node", "Express", "Keras"]
 
 Most programmers were introduced to coding through Scratch, a block-based programming language that simplifies the process of buliding games, animations, and stories. Why not make machine learning as easy as Scratch, or even better -- directly with the framework that made Scratch? (IgnitionHacks)
 
-{{< figure src="/img/block/demo.png" alt="Scratch-like editor" width="70%">}}
+{{< figure link="/img/block/demo.png" alt="Scratch-like editor" width="70%">}}
 
 <!--more-->
 

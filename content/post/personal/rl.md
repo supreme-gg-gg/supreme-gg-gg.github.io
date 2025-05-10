@@ -24,7 +24,7 @@ Reinforcement learning (RL) is a way of training an agent to make sequences of d
 
 The agent learns to maximize the total reward by learning a **policy** that maps states to actions. The agent interacts with the environment by observing the state, taking an action, and receiving a reward. The agent then updates its policy based on the reward it receives.
 
-{{< figure src="/img/rl/rl.png" caption="The Reinforcement Learning Paradigm">}}
+{{< figure link="/img/rl/rl.png" caption="The Reinforcement Learning Paradigm" width="80%">}}
 
 The agent learns a deterministic (e.g. DDPG) or stochastic (e.g. REINFORCE, PPO) policy:
 
