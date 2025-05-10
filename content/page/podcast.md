@@ -13,7 +13,7 @@ In the winter of 2024, my friend Calo and I started a podcast called "Of Sand an
 
 Reflecting on the relationship between technology and humanity, we devoted ourselves to 5 deep talk episode, each of an hour long and revolved around our passion in philosophy, literature, and storytelling through books, films, and TV shows.
 {{< column >}}
-{{< figure src="/img/side-quests/of-sand-and-stars.png" width="85%">}}
+{{< figure link="/img/side-quests/of-sand-and-stars.png" width="85%">}}
 {{< endcolumns >}}
 
 Together, we discussed topics like the growing-up experience in the digital age, the transformation of creativity and education, ethics in AI, the meaning of work, and the interplay of intelligence and consciousness.

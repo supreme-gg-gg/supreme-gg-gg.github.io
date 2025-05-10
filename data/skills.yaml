@@ -47,6 +47,11 @@ skills:
     name: PostgreSQL
     icon: postgresql/postgresql-original-wordmark.svg
     category: Languages
+  rust:
+    name: Rust
+    icon: rust/rust-original.svg
+    category: Languages
+
   # Frameworks
   react:
     name: React
@@ -204,4 +209,8 @@ skills:
   pytest:
     name: PyTest
     icon: pytest/pytest-original.svg
+    category: DevTools
+  vscode:
+    name: VS Code
+    icon: vscode/vscode-original.svg
     category: DevTools

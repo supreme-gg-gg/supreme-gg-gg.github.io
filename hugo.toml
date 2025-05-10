@@ -24,13 +24,13 @@ pygmentsCodefencesGuessSyntax = true
 
 [Params] 
 #  homeTitle = "Jet Chiang's Portfolio" # Set a different text for the header on the home page
-  subtitle = "Engineering Science, University of Toronto"
+  subtitle = "Building tech for human flourishment"
   mainSections = ["post","posts"]
   logo = "img/pfp.jpg" # Expecting square dimensions
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
   enableGitInfo = true
-  commit = "https://github.com/supreme-gg-gg/my-portfolio/tree/"
+  commit = "https://github.com/supreme-gg-gg/supreme-gg-gg.github.io/tree/"
 #  rss = true
   comments = true
   readingTime = true
@@ -39,6 +39,7 @@ pygmentsCodefencesGuessSyntax = true
   socialShare = true
   delayDisqus = true
   showRelatedPosts = true
+  googleAnalytics = "G-VFK4B3BBVX"
 #  cusdisID = "XXX" # Get your App id from cusdis.com
 #  hideAuthor = true
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
@@ -59,7 +60,7 @@ pygmentsCodefencesGuessSyntax = true
 [Params.author]
   # Set only your "username" for default hosts and full URLs otherwise (e.g., "https://MyGitLab.org/username")
   name = "Jet Chiang"
-  website = "yourwebsite.com"
+  website = "jetchiang.co"
   email = "jetjiang.ez@gmail.com"
   github = "supreme-gg-gg"
   gitlab = "supreme-gg-gg"
@@ -87,7 +88,7 @@ pygmentsCodefencesGuessSyntax = true
 
 [[menu.main]]
     parent = "side-quests"
-    name = "Posts"
+    name = "Blog"
     url = "page/blog/"
     weight = 2
   
