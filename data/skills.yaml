@@ -27,10 +27,10 @@ skills:
     name: TypeScript
     icon: typescript/typescript-original.svg
     category: Languages
-  html:
-    name: HTML
-    icon: html5/html5-original.svg
-    category: Languages
+  # html:
+  #   name: HTML
+  #   icon: html5/html5-original.svg
+  #   category: Languages
   # css:
   #   name: CSS
   #   icon: css3/css3-original.svg
