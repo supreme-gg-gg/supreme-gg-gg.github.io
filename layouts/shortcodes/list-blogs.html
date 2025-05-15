@@ -1,0 +1,6 @@
+<div class="posts-list">
+{{ $blogs := where .Site.RegularPages "Section" "blogs" }}
+{{ range $blogs.ByDate.Reverse }}
+    {{ partial "post_preview.html" . }}
+{{ end }}
+</div>

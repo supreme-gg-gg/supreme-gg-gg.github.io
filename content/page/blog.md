@@ -1,7 +1,9 @@
 ---
 title: Blog
-subtitle: Coming Soon
+subtitle: Writings and Reflections
 comments: true
 ---
 
-Blog will be coming in the next month. Currently planned articles on book / literature reviews, tech like ML and SWE, and reflections on my work.
+Welcome to my blog section where I share thoughts on technology, book reviews, and work experiences. This page started in Summer 2025 and is currently growing!
+
+{{< list-blogs >}}
