@@ -16,7 +16,7 @@ pygmentsCodefencesGuessSyntax = true
   [Services.Disqus]
     # Shortname = "XXX"
   [Services.googleAnalytics]
-    # id = "G-VFK4B3BBVX"
+    id = "G-VFK4B3BBVX"
 
 [privacy]
   [privacy.googleAnalytics]
@@ -39,7 +39,6 @@ pygmentsCodefencesGuessSyntax = true
   socialShare = true
   delayDisqus = true
   showRelatedPosts = true
-  googleAnalytics = "G-VFK4B3BBVX"
 #  cusdisID = "XXX" # Get your App id from cusdis.com
 #  hideAuthor = true
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
@@ -94,7 +93,7 @@ pygmentsCodefencesGuessSyntax = true
   
 [[menu.main]]
     name = "Projects"
-    url = ""
+    url = "post"
     weight = 2
 
 # [[menu.main]]
