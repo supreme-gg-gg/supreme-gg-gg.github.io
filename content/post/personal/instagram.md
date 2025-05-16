@@ -5,7 +5,7 @@ date: 2025-02-15
 tags: ["personal-projects"]
 ---
 
-Ever opened Instagram just to send a quick message, only to find yourself doomscrolling for hours? Introducing the world's first TUI + CLI client for Instagram, putting an end to the brainrot hell and turning it back into a productive social networking tool. **Download from PyPI and star our [GitHub repo](https://github.com/supreme-gg-gg/instagram-cli) (we're got 3k downloads already)!**
+Ever opened Instagram just to send a quick message, only to find yourself doomscrolling for hours? Introducing the world's first TUI + CLI client for Instagram, putting an end to the brainrot hell and turning it back into a productive social networking tool. **Download from PyPI and star our [GitHub repo](https://github.com/supreme-gg-gg/instagram-cli) (we're got 5k downloads already)!**
 
 ```bash
 pip install instagram-cli
@@ -67,3 +67,7 @@ Our in-chat TUI commands include view images and videos, replying to messages, s
 We built this with `curses, typer` and we would like to acknowledge `instagrapi` for reverse engineering the Instagram API.
 
 {{< button url="https://github.com/supreme-gg-gg/instagram-cli/tree/main" >}}Star our repo!{{< /button >}}
+
+## The Creation Story
+
+I will try to find some time to write a section on the technical details of the project (so you can learn how to build personal projects and Python applications).
