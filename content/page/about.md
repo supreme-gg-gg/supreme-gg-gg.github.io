@@ -12,15 +12,20 @@ My name is Jet Chiang. I like learning random stuff and spending most of my time
 
 ## Interests
 
-I am passionate about machine learning and its growing applications. In particular, cognitive science and neuroscience fascinates me because I am eager to understand and solve intelligence.
+I am passionate about machine learning and its growing applications in the software world and beyond. I'm also interested in areas like cognitive science, neuroscience, and robotics.
 
 **Currently, I'm working on:**
 
-- Gemma2 text and multimodal fine tuning @ Google DeepMind (GSoC 2025)
+- Cloud native AI agents on Kubernetes @ Linux Foundation Mentorship, CNCF / Kagent
+- Democratizing SLM fine-tuning @ Google Summer of Code with Google DeepMind
 - Scientific machine learning in solar cell research @ National University of Singapore
-- Decentralized finance @ Carbon Array (UofT Hatchery backed startup)
 
-Previously, I interned as SWE at Ericsson's indoor radio team and Savi Finance's backend engineering team. At UofT, I've worked at 4 design teams across MLE, quant finance, neurotech, and genetics.
+**Previously, I'm part of:**
+
+- Making solar cell physics model 100,000x faster with neural emulation @ National University of Singapore
+- Developing agentic financial data extraction from multimodal sources @ Savi Finance
+- Building software and tests on indoor radio dots @ Ericsson
+- 3 design teams acrosds quant finance, MLE, neurotech @ UofT Engineering
 
 > I love learning through side projects, hackathons (attended 9+ in 2025), and collaborative problem-solving. Hit me up if you have a cool project idea!
 
