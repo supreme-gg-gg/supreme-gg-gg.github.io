@@ -10,13 +10,15 @@ This summer I had the incredible opportunity to build Facet AI as my Google Summ
 
 {{< youtube JGnzoLSZReI >}}
 
+{{< button url="https://github.com/gemma-facet" >}}Checkout Facet AI's GitHub{{< /button >}}
+
 ## The Small Language Model Revolution
+
+SLMs are moving fast. Weekly releases and focused research mean smaller models now beat larger ones on many specialized benchmarks once they’re tuned. [Researchers from NVIDIA also suggested that SLMs might power the future of agentic AI](https://arxiv.org/pdf/2506.02153). They’re cheaper, faster, and—critically—easier to deploy. That creates an opportunity: if we make fine-tuning accessible, teams outside of AI labs can build high-value, domain-specific models without huge cost or infrastructure overhead.
 
 ![Growth of SLMs](https://cdn-bdmhh.nitrocdn.com/JNiKLBzGPsfbQJqUQoZqIbUrxBklWopT/assets/images/optimized/rev-a72f3cd/objectbox.io/wordpress/wp-content/uploads/2024/12/2024_12_16_SLMs_2-1-1.png)
 
 _Online image, slightly outdated as of Sep 2025_
-
-SLMs are moving fast. Weekly releases and focused research mean smaller models now beat larger ones on many specialized benchmarks once they’re tuned. [Researchers from NVIDIA also suggested that SLMs might power the future of agentic AI](https://arxiv.org/pdf/2506.02153). They’re cheaper, faster, and—critically—easier to deploy. That creates an opportunity: if we make fine-tuning accessible, teams outside of AI labs can build high-value, domain-specific models without huge cost or infrastructure overhead.
 
 Facet AI is built to be that bridge. Instead of asking users to stitch together notebooks, config files, and ad-hoc scripts, we provide a single, secure place to manage experiments, reproduce results, and iterate with confidence.
 
@@ -28,7 +30,7 @@ Gemma was a natural choice. It comes in many sizes (270M to 27B), supports multi
 
 ## Highlights
 
-Working with Adarsh Dubey, we built Facet AI to cover the full fine-tuning lifecycle. Key features include:
+Working with [Adarsh Dubey](https://www.linkedin.com/in/dubeyadarsh/), we built Facet AI to cover the full fine-tuning lifecycle. Key features include:
 
 1. **Everything dataset!** Formatting, preprocessing, augmentation, LLM-assisted synthesis, and convenient import/export options. Dataset handling is often the messiest part of fine-tuning for newcomers; we standardize and automate the heavy lifting and support TRL-style formats for both supervised fine-tuning and reinforcement approaches.
 
@@ -47,7 +49,7 @@ This section lists my core technical contributions with links to the PRs:
 - Training service using Unsloth and TRL: [PR #7](https://github.com/gemma-facet/cloud-services/pull/7)
 - Setup and maintenance of cloud architecture: [PR #14](https://github.com/gemma-facet/cloud-services/pull/14), [PR #36](https://github.com/gemma-facet/cloud-services/pull/36)
 - Multimodal training support: [PR #22](https://github.com/gemma-facet/cloud-services/pull/22)
-- Evaluation and export tooling (later optimized with vLLM for batch inferencing): [PR #29](https://github.com/gemma-facet/cloud-services/pull/29), [PR #57](https://github.com/gemma-facet/cloud-services/pull/57)
+- Evaluation and export tooling (with vLLM optimization): [PR #29](https://github.com/gemma-facet/cloud-services/pull/29), [PR #57](https://github.com/gemma-facet/cloud-services/pull/57)
 - Full-stack features (CRUD, accounts, authentication): [PR #34](https://github.com/gemma-facet/cloud-services/pull/34), [PR #35](https://github.com/gemma-facet/cloud-services/pull/35)
 - Built-in support for multiple dataset types: [PR #39](https://github.com/gemma-facet/cloud-services/pull/39)
 - Reinforcement fine-tuning (RFT) work: [PR #44](https://github.com/gemma-facet/cloud-services/pull/44)
