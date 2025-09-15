@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div role="main" class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      {{ with .Content }}
+      <div class="well">{{ . }}</div>
+      {{ end }}
+
+      <!-- Show the single most recent project -->
+      {{ $projects := first 1 (where site.RegularPages "Section" "post") }} {{
+      if gt (len $projects) 0 }}
+      <h2>Latest project</h2>
+      {{ range $projects }} {{ partial "post_preview" . }} {{ end }} {{ end }}
+
+      <!-- Show the single most recent blog -->
+      {{ $blogs := first 1 (where site.RegularPages "Section" "blogs") }} {{ if
+      eq (len $blogs) 0 }}
+      <!-- Fallback to 'blog' or 'post' if 'blogs' section is absent -->
+      {{ $blogs = first 1 (where site.RegularPages "Section" "blog") }} {{ end
+      }} {{ if eq (len $blogs) 0 }} {{ $blogs = first 1 (where site.RegularPages
+      "Section" "posts") }} {{ end }} {{ if gt (len $blogs) 0 }}
+      <h2>Latest blog</h2>
+      {{ range $blogs }} {{ partial "post_preview" . }} {{ end }} {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

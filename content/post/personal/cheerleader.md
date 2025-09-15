@@ -1,6 +1,6 @@
 ---
 title: VSCode Cheerleader
-subtitle: Supercharge your dev experience with an anime coding companion
+subtitle: The world's first anime-themed voice-based coding agent
 date: 2025-05-01
 tags: ["genai", "personal-projects"]
 skills: ["Electron", "TypeScript", "VSCode"]
@@ -16,19 +16,19 @@ Cheerleader is designed to recreate the magic of collaborative thinking — whet
 
 ## Features
 
-* Interactive Avatar – **Reacts** to your mouse, clicks, and drag it around (Live2D + PixiJS)
+- Interactive Avatar – **Reacts** to your mouse, clicks, and drag it around (Live2D + PixiJS)
 
-* Full Voice Interaction – Talk **naturally**, it’s faster than typing and keeps you in flow
+- Full Voice Interaction – Talk **naturally**, it’s faster than typing and keeps you in flow
 
-* LLM Coding Agent - Access workspace context, ask questions, encourage you to **think**, and take actions in your editor
+- LLM Coding Agent - Access workspace context, ask questions, encourage you to **think**, and take actions in your editor
 
-* Motivation & Wellness Nudges – Real-time encouragement based on your **workspace** activity, plus gentle reminders to stop brainrotting, take a shower, take breaks, or touch grass
+- Motivation & Wellness Nudges – Real-time encouragement based on your **workspace** activity, plus gentle reminders to stop brainrotting, take a shower, take breaks, or touch grass
 
 ## The Story
 
-Our story begun when James suggested how we can build a rubber duck debugger that help you to pause, reflect, and stay grounded instead of just vibe code your way through challenges. Except in this case, the duck could talk back and high-five you when your tests finally pass. 
+Our story begun when James suggested how we can build a rubber duck debugger that help you to pause, reflect, and stay grounded instead of just vibe code your way through challenges. Except in this case, the duck could talk back and high-five you when your tests finally pass.
 
-From crafting a unique avatar UI to tapping into the latest LLM capabilities through the VSCode API, we’re building a coding companion with charm — one that listens, celebrates your small wins, and gives you a nudge when you hit a wall. 
+From crafting a unique avatar UI to tapping into the latest LLM capabilities through the VSCode API, we’re building a coding companion with charm — one that listens, celebrates your small wins, and gives you a nudge when you hit a wall.
 
 > Because we believe programming should be powerful and delightful — not isolating, and definitely not a chore.
 

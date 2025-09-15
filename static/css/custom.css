@@ -70,27 +70,42 @@
 }
 
 .custom-button {
+  /* spacing */
+  margin-top: 16px; /* upper padding requested */
+
+  /* visual */
   background-color: #404040;
-  color: white;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  padding: 12px 24px;
+  color: #ffffff;
+  /* inherit typography from the surrounding context so button matches theme */
+  font: inherit;
+  padding: 12px 26px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(64, 64, 64, 0.12);
+  transition: background-color 0.18s ease, transform 0.12s ease,
+    box-shadow 0.18s ease;
   border: none;
+  cursor: pointer;
 }
 
 .custom-button:hover,
 .custom-button:focus {
-  background-color: #333333;
-  transform: translateY(-2px);
+  background-color: #2f6b7a; /* slightly blue-teal to match site accent */
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(47, 107, 122, 0.12);
+  outline: none;
 }
 
 .custom-button:active {
-  background-color: #282828;
+  background-color: #25535b;
+  transform: translateY(-1px);
+}
+
+/* keyboard focus visible */
+.custom-button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(47, 107, 122, 0.16);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -189,51 +204,51 @@
 }
 
 .gallery {
-    overflow: hidden;
-    margin: 10px auto;
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  overflow: hidden;
+  margin: 10px auto;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .gallery .box {
-    float: left;
-    position: relative;
-    width: 32%;
-    padding-bottom: 32%;
-    margin-bottom: 1%;
+  float: left;
+  position: relative;
+  width: 32%;
+  padding-bottom: 32%;
+  margin-bottom: 1%;
 }
 
 @media only screen and (max-width: 767px) {
-    .gallery .box {
-        width: 48%;
-        padding-bottom: 48%;
-    }
+  .gallery .box {
+    width: 48%;
+    padding-bottom: 48%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    .gallery .box {
-        width: 100%;
-        padding-bottom: 100%;
-    }
+  .gallery .box {
+    width: 100%;
+    padding-bottom: 100%;
+  }
 }
 
 .gallery figure {
-    position: absolute;
-    left: 5px;
-    right: 5px;
-    top: 5px;
-    bottom: 5px;
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
 }
 
 .gallery .img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }

@@ -4,11 +4,9 @@ disable_header: true
 
 {{< hello-world >}}
 
-I am a first year undergraduate student studying [Engineering Science](https://engsci.utoronto.ca/program/what-is-engsci/) at the University of Toronto. With multiple software engineering internships and machine learning research experience, I am passionate to innovate about ML and its applications such as scientific machine learning, robotics, and biotechnology.
+I am an undergraduate student studying Computer Engineering at the University of Toronto. I have experience in various software engineering and machine learning roles at industry, academia, and open-source. I'm excited to innovate about AI and how it can be extended to empower human flourishing and study the universe.
 
-Outside of hackathons, design teams, and personal projects, I enjoy learning and trying random cool stuff and reading classic literature and philosophy.
-
-**Keep scrolling to view a list of my present and past projects.**
+Outside of internships, hackathons, design teams, and personal projects, I enjoy learning and trying random cool stuff and reading classic literature and philosophy.
 
 {{< button url="https://drive.google.com/file/d/1ofM3UZ43kr2m6Jpy5V-_gKnVgGKMYZq8/view?usp=sharing" >}}Resume Download{{< /button >}}
 

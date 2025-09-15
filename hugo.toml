@@ -74,27 +74,42 @@ pygmentsCodefencesGuessSyntax = true
     url = "page/about"
     weight = 1
 
-[[menu.main]]
-    identifier = "side-quests"
-    name = "Side Quests"
-    weight = 3
+#[[menu.main]]
+#    identifier = "side-quests"
+#    name = "Side Quests"
+#    weight = 3
+
+# [[menu.main]]
+#    parent = "side-quests"
+#    name = "Podcast"
+#    url = "page/podcast"
+#    weight = 1
+
+#[[menu.main]]
+#    parent = "side-quests"
+#    name = "Blog"
+#    url = "page/blog/"
+#    weight = 2
 
 [[menu.main]]
-    parent = "side-quests"
-    name = "Podcast"
-    url = "page/podcast"
-    weight = 1
-
-[[menu.main]]
-    parent = "side-quests"
-    name = "Blog"
-    url = "page/blog/"
+    name = "Experience"
+    url = "page/experience"
     weight = 2
-  
+
 [[menu.main]]
     name = "Projects"
     url = "post"
-    weight = 2
+    weight = 3
+
+[[menu.main]]
+    name = "Blog"
+    url = "page/blog"
+    weight = 4
+  
+[[menu.main]]
+    name = "Podcast"
+    url = "page/podcast"
+    weight = 5
 
 # [[menu.main]]
 #    name = "Research"
@@ -102,11 +117,6 @@ pygmentsCodefencesGuessSyntax = true
 #    weight = 2
 
 [[menu.main]]
-    name = "Experience"
-    url = "page/experience"
-    weight = 3
-
-[[menu.main]]
     name = "Tags"
     url = "tags"
-    weight = 3
+    weight = 6
